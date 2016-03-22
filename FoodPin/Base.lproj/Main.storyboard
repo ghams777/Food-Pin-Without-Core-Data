@@ -121,8 +121,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg9-hQ-20E">
                                                     <rect key="frame" x="14" y="9" width="91" height="21"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -149,6 +148,7 @@
                     <navigationItem key="navigationItem" id="XUR-8G-8Rk"/>
                     <connections>
                         <outlet property="restaurantImageView" destination="FVV-Ax-Ni6" id="BWt-0g-K8J"/>
+                        <outlet property="tableView" destination="UVo-5X-AJN" id="OVh-Cd-168"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwB-En-ovi" userLabel="First Responder" sceneMemberID="firstResponder"/>

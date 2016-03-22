@@ -11,9 +11,10 @@ import UIKit
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var restaurant:Restaurant!
+    var restaurantImage : String!
     
     @IBOutlet var restaurantImageView : UIImageView!
-    var restaurantImage : String!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,16 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
         self.restaurantImageView.image = UIImage(named: restaurant.image)
         
+        // Set table view background color
+        self.tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+        
+        // Remove extra separator
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        // Change separator color
+        self.tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+        
+        // Set navigation bar title
         title = self.restaurant.name
     }
 
@@ -55,6 +66,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             cell.valueLabel.text = ""
             
         }
+        
+        cell.backgroundColor = UIColor.clearColor()
         
         return cell
     }
