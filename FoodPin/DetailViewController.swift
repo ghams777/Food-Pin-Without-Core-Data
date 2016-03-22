@@ -34,7 +34,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Set navigation bar title
         title = self.restaurant.name
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.hidesBarsOnSwipe = false
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,6 +54,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! DetailTableViewCell
+        
+        cell.backgroundColor = UIColor.clearColor()
         
         switch indexPath.row {
         case 0:
@@ -71,7 +80,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
     }
-    
     
 
     /*
