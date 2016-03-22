@@ -107,6 +107,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XUR-8G-8Rk"/>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="FVV-Ax-Ni6" id="BWt-0g-K8J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwB-En-ovi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
