@@ -98,16 +98,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVV-Ax-Ni6">
-                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UVo-5X-AJN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="FVV-Ax-Ni6">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="250"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Table View Cell" rowHeight="36" id="kD6-NY-Kx8" customClass="DetailTableViewCell" customModule="FoodPin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="342" width="320" height="36"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kD6-NY-Kx8" id="IQ4-Ma-4Cd">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYG-bS-hhV">
+                                                    <rect key="frame" x="75" y="7" width="220" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg9-hQ-20E">
+                                                    <rect key="frame" x="14" y="7" width="37" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fieldLabel" destination="Yg9-hQ-20E" id="u54-ue-xFT"/>
+                                            <outlet property="valueLabel" destination="bYG-bS-hhV" id="VWF-5l-dlr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FVV-Ax-Ni6" firstAttribute="leading" secondItem="kg9-uu-Swz" secondAttribute="leading" id="3Wu-1R-I2t"/>
-                            <constraint firstAttribute="trailing" secondItem="FVV-Ax-Ni6" secondAttribute="trailing" id="69E-PR-Nwt"/>
-                            <constraint firstItem="FVV-Ax-Ni6" firstAttribute="top" secondItem="Aql-dn-Obv" secondAttribute="bottom" constant="139" id="GAQ-S4-Zk8"/>
-                            <constraint firstItem="FVV-Ax-Ni6" firstAttribute="centerY" secondItem="kg9-uu-Swz" secondAttribute="centerY" id="pWf-Ef-An5"/>
+                            <constraint firstItem="UVo-5X-AJN" firstAttribute="bottom" secondItem="yus-tw-gcw" secondAttribute="top" id="5g4-jr-wdA"/>
+                            <constraint firstAttribute="trailing" secondItem="UVo-5X-AJN" secondAttribute="trailing" id="Dnj-AM-q6l"/>
+                            <constraint firstItem="UVo-5X-AJN" firstAttribute="top" secondItem="kg9-uu-Swz" secondAttribute="top" id="dfr-ex-QCY"/>
+                            <constraint firstItem="UVo-5X-AJN" firstAttribute="leading" secondItem="kg9-uu-Swz" secondAttribute="leading" id="vcD-T2-OrZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XUR-8G-8Rk"/>
