@@ -49,7 +49,7 @@
                                     <outlet property="nameLabel" destination="bl1-yY-SbC" id="v8O-yC-xFr"/>
                                     <outlet property="thumbnailImageView" destination="VYY-3N-6MG" id="vgW-Cx-C5d"/>
                                     <outlet property="typeLabel" destination="VKl-m3-7sT" id="cJW-e6-VjQ"/>
-                                    <segue destination="Hxu-qh-qGd" kind="push" id="R4V-ln-6Hh"/>
+                                    <segue destination="Hxu-qh-qGd" kind="push" identifier="showRestaurantDetail" id="R4V-ln-6Hh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
