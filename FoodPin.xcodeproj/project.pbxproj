@@ -15,6 +15,7 @@
 		84B29CD51CA0EB6900530A97 /* FoodPinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B29CD41CA0EB6900530A97 /* FoodPinUITests.swift */; };
 		84B29CE31CA0EBD100530A97 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B29CE21CA0EBD100530A97 /* RestaurantTableViewController.swift */; };
 		84B29CE51CA0F0E600530A97 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B29CE41CA0F0E600530A97 /* CustomTableViewCell.swift */; };
+		84B29CE71CA1075200530A97 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B29CE61CA1075200530A97 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		84B29CD61CA0EB6900530A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B29CE21CA0EBD100530A97 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		84B29CE41CA0F0E600530A97 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		84B29CE61CA1075200530A97 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				84B29CB41CA0EB6900530A97 /* AppDelegate.swift */,
 				84B29CE21CA0EBD100530A97 /* RestaurantTableViewController.swift */,
 				84B29CE41CA0F0E600530A97 /* CustomTableViewCell.swift */,
+				84B29CE61CA1075200530A97 /* DetailViewController.swift */,
 				84B29CB81CA0EB6900530A97 /* Main.storyboard */,
 				84B29CBB1CA0EB6900530A97 /* Assets.xcassets */,
 				84B29CBD1CA0EB6900530A97 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				84B29CE51CA0F0E600530A97 /* CustomTableViewCell.swift in Sources */,
 				84B29CE31CA0EBD100530A97 /* RestaurantTableViewController.swift in Sources */,
 				84B29CB51CA0EB6900530A97 /* AppDelegate.swift in Sources */,
+				84B29CE71CA1075200530A97 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +490,7 @@
 				84B29CDB1CA0EB6900530A97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84B29CDC1CA0EB6900530A97 /* Build configuration list for PBXNativeTarget "FoodPinTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +499,7 @@
 				84B29CDE1CA0EB6900530A97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84B29CDF1CA0EB6900530A97 /* Build configuration list for PBXNativeTarget "FoodPinUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +508,7 @@
 				84B29CE11CA0EB6900530A97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
