@@ -239,7 +239,7 @@ class RestaurantTableViewController: UITableViewController {
                 
                 let destinationController = segue.destinationViewController as! DetailViewController
                 
-                destinationController.restaurantImage = self.restaurants[indexPath.row].image
+                destinationController.restaurant = restaurants[indexPath.row]
             }
         }
     }

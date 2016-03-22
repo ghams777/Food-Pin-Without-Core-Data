@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDataSouce, UITableViewDelegate {
+class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var restaurant:Restaurant!
     
@@ -20,6 +20,8 @@ class DetailViewController: UIViewController, UITableViewDataSouce, UITableViewD
 
         // Do any additional setup after loading the view.
         self.restaurantImageView.image = UIImage(named: restaurant.image)
+        
+        title = self.restaurant.name
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +55,8 @@ class DetailViewController: UIViewController, UITableViewDataSouce, UITableViewD
             cell.valueLabel.text = ""
             
         }
+        
+        return cell
     }
     
     
