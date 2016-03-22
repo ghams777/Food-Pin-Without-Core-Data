@@ -42,9 +42,13 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="QA2-WX-7YA">
+                                            <rect key="frame" x="249" y="5" width="30" height="30"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favorIconImageView" destination="QA2-WX-7YA" id="R9a-ln-kR0"/>
                                     <outlet property="locationLabel" destination="LTG-qr-zMR" id="mG3-Yx-YxD"/>
                                     <outlet property="nameLabel" destination="bl1-yY-SbC" id="v8O-yC-xFr"/>
                                     <outlet property="thumbnailImageView" destination="VYY-3N-6MG" id="vgW-Cx-C5d"/>
@@ -116,4 +120,7 @@
             <point key="canvasLocation" x="1105" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="64" height="64"/>
+    </resources>
 </document>
