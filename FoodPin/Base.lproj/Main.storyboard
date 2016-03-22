@@ -14,11 +14,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="sBY-pM-LLC" customClass="CustomTableViewCell" customModule="FoodPin" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="sBY-pM-LLC" customClass="CustomTableViewCell" customModule="FoodPin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sBY-pM-LLC" id="H8A-bJ-naJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYY-3N-6MG">
@@ -49,6 +49,7 @@
                                     <outlet property="nameLabel" destination="bl1-yY-SbC" id="v8O-yC-xFr"/>
                                     <outlet property="thumbnailImageView" destination="VYY-3N-6MG" id="vgW-Cx-C5d"/>
                                     <outlet property="typeLabel" destination="VKl-m3-7sT" id="cJW-e6-VjQ"/>
+                                    <segue destination="Hxu-qh-qGd" kind="push" id="R4V-ln-6Hh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,6 +81,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmI-Uc-04K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="157" y="366"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WU9-zk-p4B">
+            <objects>
+                <viewController id="Hxu-qh-qGd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aql-dn-Obv"/>
+                        <viewControllerLayoutGuide type="bottom" id="yus-tw-gcw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kg9-uu-Swz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVV-Ax-Ni6">
+                                <rect key="frame" x="0.0" y="159" width="320" height="250"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FVV-Ax-Ni6" firstAttribute="leading" secondItem="kg9-uu-Swz" secondAttribute="leading" id="3Wu-1R-I2t"/>
+                            <constraint firstAttribute="trailing" secondItem="FVV-Ax-Ni6" secondAttribute="trailing" id="69E-PR-Nwt"/>
+                            <constraint firstItem="FVV-Ax-Ni6" firstAttribute="top" secondItem="Aql-dn-Obv" secondAttribute="bottom" constant="139" id="GAQ-S4-Zk8"/>
+                            <constraint firstItem="FVV-Ax-Ni6" firstAttribute="centerY" secondItem="kg9-uu-Swz" secondAttribute="centerY" id="pWf-Ef-An5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XUR-8G-8Rk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mwB-En-ovi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="366"/>
         </scene>
     </scenes>
 </document>
