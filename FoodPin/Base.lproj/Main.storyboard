@@ -167,7 +167,11 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UuE-c3-Dwr"/>
-                                    <barButtonItem systemItem="action" id="cOk-sD-BXz"/>
+                                    <barButtonItem systemItem="action" id="cOk-sD-BXz">
+                                        <connections>
+                                            <segue destination="8H6-gX-0AU" kind="push" id="EBR-iT-0Qi"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hu7-IG-ayB"/>
                                     <barButtonItem systemItem="compose" id="1Rx-MR-rdZ">
                                         <connections>
@@ -297,13 +301,94 @@
             </objects>
             <point key="canvasLocation" x="1470" y="366"/>
         </scene>
+        <!--Share View Controller-->
+        <scene sceneID="G17-yB-qi5">
+            <objects>
+                <viewController id="8H6-gX-0AU" customClass="ShareViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xvs-ho-j0I"/>
+                        <viewControllerLayoutGuide type="bottom" id="ouS-Yo-C7F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mra-oo-OCy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafedeadend" translatesAutoresizingMaskIntoConstraints="NO" id="PGY-B5-wPV">
+                                <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lmt-gr-ebk">
+                                <rect key="frame" x="81" y="217" width="160" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZZ-8P-fwb">
+                                        <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.065483570790000001" green="0.36703238529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button" image="facebook"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHk-Eh-oH9">
+                                        <rect key="frame" x="20" y="80" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.63115832270000005" green="0.22587094229999999" blue="0.23239096970000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button" image="message"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exN-Re-gjx">
+                                        <rect key="frame" x="80" y="20" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.21192674049999999" green="0.79837969799999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button" image="twitter"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tr-2N-LRi">
+                                        <rect key="frame" x="80" y="80" width="60" height="60"/>
+                                        <color key="backgroundColor" red="1" green="0.32051120630000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button" image="email"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhj-3G-WtC">
+                                <rect key="frame" x="270" y="91" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C0S-Fn-RG5"/>
+                                    <constraint firstAttribute="width" constant="30" id="M4q-8c-y0G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <segue destination="84p-DR-sve" kind="unwind" unwindAction="close:" id="oLG-Q5-UD3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PGY-B5-wPV" firstAttribute="top" secondItem="mra-oo-OCy" secondAttribute="topMargin" constant="58" id="3Mb-lB-AjA"/>
+                            <constraint firstItem="hhj-3G-WtC" firstAttribute="trailing" secondItem="mra-oo-OCy" secondAttribute="trailingMargin" constant="-10" id="9LG-SG-ztS"/>
+                            <constraint firstAttribute="trailing" secondItem="PGY-B5-wPV" secondAttribute="trailing" id="C2K-Z1-XbM"/>
+                            <constraint firstItem="Lmt-gr-ebk" firstAttribute="centerX" secondItem="mra-oo-OCy" secondAttribute="centerX" id="ESX-en-Oqn"/>
+                            <constraint firstItem="Lmt-gr-ebk" firstAttribute="centerY" secondItem="mra-oo-OCy" secondAttribute="centerY" id="VNg-nJ-sXE"/>
+                            <constraint firstItem="PGY-B5-wPV" firstAttribute="leading" secondItem="mra-oo-OCy" secondAttribute="leading" id="lrn-MM-VtL"/>
+                            <constraint firstItem="hhj-3G-WtC" firstAttribute="top" secondItem="xvs-ho-j0I" secondAttribute="bottom" constant="20" id="q50-M1-LJy"/>
+                            <constraint firstItem="PGY-B5-wPV" firstAttribute="bottom" secondItem="ouS-Yo-C7F" secondAttribute="top" id="ug0-NZ-F6L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E6b-gY-ztp"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="PGY-B5-wPV" id="j4E-Wv-vaB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehn-k7-QNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="84p-DR-sve" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1470" y="1115"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bad" width="64" height="64"/>
+        <image name="cafedeadend" width="640" height="640"/>
         <image name="cafeloisl" width="640" height="640"/>
         <image name="close" width="64" height="64"/>
+        <image name="email" width="64" height="64"/>
+        <image name="facebook" width="64" height="64"/>
         <image name="good" width="64" height="64"/>
         <image name="great" width="64" height="64"/>
         <image name="heart" width="64" height="64"/>
+        <image name="message" width="64" height="64"/>
+        <image name="twitter" width="64" height="64"/>
     </resources>
 </document>
