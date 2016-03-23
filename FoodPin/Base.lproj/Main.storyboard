@@ -199,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="1105" y="366"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="kMw-B4-9jB">
             <objects>
-                <viewController id="xR4-PM-dNW" sceneMemberID="viewController">
+                <viewController id="xR4-PM-dNW" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UoQ-q6-9DX"/>
                         <viewControllerLayoutGuide type="bottom" id="2oy-Oq-hqp"/>
@@ -287,6 +287,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wMV-5H-Dtf"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="3Qa-mY-eIP" id="IW9-QX-c6x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dE6-sL-5iw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="vPa-Ve-IUY" userLabel="Exit" sceneMemberID="exit"/>
