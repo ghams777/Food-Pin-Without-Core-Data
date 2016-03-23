@@ -140,7 +140,7 @@
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYG-bS-hhV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYG-bS-hhV">
                                                     <rect key="frame" x="95" y="8" width="217" height="20"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,6 +148,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="bYG-bS-hhV" firstAttribute="top" secondItem="IQ4-Ma-4Cd" secondAttribute="topMargin" id="GbH-0B-ybH"/>
                                                 <constraint firstItem="bYG-bS-hhV" firstAttribute="trailing" secondItem="IQ4-Ma-4Cd" secondAttribute="trailingMargin" constant="10" id="jOv-rf-rXf"/>
                                                 <constraint firstItem="bYG-bS-hhV" firstAttribute="leading" secondItem="IQ4-Ma-4Cd" secondAttribute="leadingMargin" constant="87" id="vBe-zN-Rxy"/>
                                             </constraints>
@@ -162,13 +163,26 @@
                                     <outlet property="dataSource" destination="Hxu-qh-qGd" id="DGQ-e2-t6P"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7O-kP-Dqc">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UuE-c3-Dwr"/>
+                                    <barButtonItem systemItem="action" id="cOk-sD-BXz"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hu7-IG-ayB"/>
+                                    <barButtonItem systemItem="compose" id="1Rx-MR-rdZ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8Rd-Ip-sQ0"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UVo-5X-AJN" firstAttribute="bottom" secondItem="yus-tw-gcw" secondAttribute="top" id="5g4-jr-wdA"/>
                             <constraint firstAttribute="trailing" secondItem="UVo-5X-AJN" secondAttribute="trailing" id="Dnj-AM-q6l"/>
+                            <constraint firstItem="r7O-kP-Dqc" firstAttribute="trailing" secondItem="UVo-5X-AJN" secondAttribute="trailing" id="Vqg-H3-rNB"/>
+                            <constraint firstItem="r7O-kP-Dqc" firstAttribute="leading" secondItem="UVo-5X-AJN" secondAttribute="leading" id="WPl-Jp-nHN"/>
                             <constraint firstItem="UVo-5X-AJN" firstAttribute="top" secondItem="kg9-uu-Swz" secondAttribute="top" id="dfr-ex-QCY"/>
                             <constraint firstItem="UVo-5X-AJN" firstAttribute="leading" secondItem="kg9-uu-Swz" secondAttribute="leading" id="vcD-T2-OrZ"/>
+                            <constraint firstItem="r7O-kP-Dqc" firstAttribute="bottom" secondItem="yus-tw-gcw" secondAttribute="top" id="ycE-jn-qp8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XUR-8G-8Rk"/>
