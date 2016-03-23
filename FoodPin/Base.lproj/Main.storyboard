@@ -169,7 +169,11 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UuE-c3-Dwr"/>
                                     <barButtonItem systemItem="action" id="cOk-sD-BXz"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hu7-IG-ayB"/>
-                                    <barButtonItem systemItem="compose" id="1Rx-MR-rdZ"/>
+                                    <barButtonItem systemItem="compose" id="1Rx-MR-rdZ">
+                                        <connections>
+                                            <segue destination="xR4-PM-dNW" kind="push" id="d1R-RQ-Jj9"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8Rd-Ip-sQ0"/>
                                 </items>
                             </toolbar>
@@ -195,8 +199,88 @@
             </objects>
             <point key="canvasLocation" x="1105" y="366"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="kMw-B4-9jB">
+            <objects>
+                <viewController id="xR4-PM-dNW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UoQ-q6-9DX"/>
+                        <viewControllerLayoutGuide type="bottom" id="2oy-Oq-hqp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bZM-gJ-AVP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeloisl" translatesAutoresizingMaskIntoConstraints="NO" id="3Qa-mY-eIP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2g3-EX-Nu6">
+                                <rect key="frame" x="45" y="163" width="231" height="242"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZK-M5-cEp">
+                                        <rect key="frame" x="16" y="138" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.63115832270000005" green="0.005749364731" blue="0.029625498730000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="bad"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygH-DX-sPR">
+                                        <rect key="frame" x="90" y="138" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="good"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyI-Nq-6LZ">
+                                        <rect key="frame" x="165" y="138" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.31764705879999999" green="0.66666666669999997" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="great"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've dined here. What do you think?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Kt-SW-cb0">
+                                        <rect key="frame" x="12" y="18" width="207" height="117"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mj-gU-B6j">
+                                <rect key="frame" x="270" y="82" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FMg-hb-2mt"/>
+                                    <constraint firstAttribute="width" constant="30" id="Q12-pv-Fca"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="close"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Qa-mY-eIP" firstAttribute="leading" secondItem="bZM-gJ-AVP" secondAttribute="leading" id="0o5-ZD-oIc"/>
+                            <constraint firstItem="2g3-EX-Nu6" firstAttribute="centerX" secondItem="bZM-gJ-AVP" secondAttribute="centerX" id="1eR-oN-JVT"/>
+                            <constraint firstItem="5mj-gU-B6j" firstAttribute="top" secondItem="UoQ-q6-9DX" secondAttribute="bottom" constant="18" id="KUk-YK-4sC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5mj-gU-B6j" secondAttribute="trailing" constant="4" id="KgP-hd-LWe"/>
+                            <constraint firstItem="2g3-EX-Nu6" firstAttribute="centerY" secondItem="bZM-gJ-AVP" secondAttribute="centerY" id="Q20-6C-ezs"/>
+                            <constraint firstItem="3Qa-mY-eIP" firstAttribute="top" secondItem="UoQ-q6-9DX" secondAttribute="bottom" id="YB3-Ew-QfH"/>
+                            <constraint firstItem="3Qa-mY-eIP" firstAttribute="bottom" secondItem="2oy-Oq-hqp" secondAttribute="top" id="hs0-56-TF1"/>
+                            <constraint firstAttribute="trailing" secondItem="3Qa-mY-eIP" secondAttribute="trailing" id="yRi-qv-pDN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wMV-5H-Dtf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dE6-sL-5iw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1470" y="366"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bad" width="64" height="64"/>
+        <image name="cafeloisl" width="640" height="640"/>
+        <image name="close" width="64" height="64"/>
+        <image name="good" width="64" height="64"/>
+        <image name="great" width="64" height="64"/>
         <image name="heart" width="64" height="64"/>
     </resources>
 </document>
