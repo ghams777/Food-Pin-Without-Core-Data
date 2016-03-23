@@ -370,6 +370,10 @@
                     <navigationItem key="navigationItem" id="E6b-gY-ztp"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="PGY-B5-wPV" id="j4E-Wv-vaB"/>
+                        <outlet property="emailButton" destination="3Tr-2N-LRi" id="6lW-P9-s16"/>
+                        <outlet property="facebookButton" destination="KZZ-8P-fwb" id="HqY-Ug-tEU"/>
+                        <outlet property="messageButton" destination="bHk-Eh-oH9" id="rQS-MC-Hz9"/>
+                        <outlet property="twitterButton" destination="exN-Re-gjx" id="eRB-hF-gln"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehn-k7-QNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
