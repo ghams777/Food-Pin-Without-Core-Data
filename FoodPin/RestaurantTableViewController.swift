@@ -60,6 +60,8 @@ class RestaurantTableViewController: UITableViewController {
         // Empty back button title
         /*
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)*/
+        self.tableView.estimatedRowHeight = 80.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func viewWillAppear(animated: Bool) {
