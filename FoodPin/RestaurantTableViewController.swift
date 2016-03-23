@@ -117,6 +117,7 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     
+    /*
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let actionSheetMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .ActionSheet)
@@ -155,7 +156,7 @@ class RestaurantTableViewController: UITableViewController {
         
         self.presentViewController(actionSheetMenu, animated: true, completion: nil)
         
-    }
+    }*/
     
     // Override to support editing the table view.
     /*override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
