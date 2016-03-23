@@ -289,6 +289,7 @@
                     <navigationItem key="navigationItem" id="wMV-5H-Dtf"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="3Qa-mY-eIP" id="IW9-QX-c6x"/>
+                        <outlet property="dialogView" destination="2g3-EX-Nu6" id="e47-Wq-hzg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dE6-sL-5iw" userLabel="First Responder" sceneMemberID="firstResponder"/>
