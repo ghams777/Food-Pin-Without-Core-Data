@@ -61,6 +61,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         cell.backgroundColor = UIColor.clearColor()
         
+        cell.mapButton.hidden = true
+        
         switch indexPath.row {
         case 0:
             cell.fieldLabel.text = "Name"
@@ -68,6 +70,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         case 1:
             cell.fieldLabel.text = "Location"
             cell.valueLabel.text = restaurant.location
+            cell.mapButton.hidden = false
         case 2:
             cell.fieldLabel.text = "Type"
             cell.valueLabel.text = restaurant.type
