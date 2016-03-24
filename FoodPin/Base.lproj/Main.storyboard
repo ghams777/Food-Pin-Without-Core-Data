@@ -439,7 +439,7 @@
         <!--New Restaurant-->
         <scene sceneID="7AG-r2-96b">
             <objects>
-                <tableViewController id="3p5-Dz-Avy" sceneMemberID="viewController">
+                <tableViewController id="3p5-Dz-Avy" customClass="AddTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dE3-p9-CXu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -605,7 +605,18 @@
                                 <segue destination="d61-Z9-7bP" kind="unwind" unwindAction="unwindToHomeScreen:" id="3ig-Y6-Mj7"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Mwd-lG-e1c">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="aO8-Dc-EuF" id="DKz-J6-NWL"/>
+                        <outlet property="locationTextField" destination="gBy-2U-VVR" id="YcW-6T-58d"/>
+                        <outlet property="nameTextField" destination="hpB-5o-dUN" id="ZF8-Jm-gyE"/>
+                        <outlet property="noButton" destination="Isl-fb-Tgd" id="ob9-Ua-SQJ"/>
+                        <outlet property="typeTextField" destination="SNh-UF-JLX" id="wdw-ES-hXG"/>
+                        <outlet property="yesButton" destination="mR9-9S-pTK" id="vIR-y9-dH5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgO-4I-u8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="d61-Z9-7bP" userLabel="Exit" sceneMemberID="exit"/>
