@@ -17,6 +17,8 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     
+    var isVisited = true
+    
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -48,6 +50,44 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
         
         dismissViewControllerAnimated(true, completion: nil)
         
+    }
+    
+    @IBAction func save() {
+        
+//        Form validation
+        var errorField = ""
+        
+        if nameTextField.text == "" {
+            errorField = "Name"
+        } else if locationTextField.text == "" {
+            errorField = "Location"
+        } else if typeTextField.text == "" {
+            errorField = "Type"
+        }
+        
+        
+//        Jika ada field yang error
+        if errorField != "" {
+            
+            let alertController = UIAlertController(title: "Warning", message: "We can't proceed as you forget to fill in the restaurant \(errorField). All fields are mandatory.", preferredStyle: .Alert)
+            
+            let doneAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alertController.addAction(doneAction)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+//        Jika tidak ada field yang error
+        print("Name: \(nameTextField.text)")
+        print("Location: \(locationTextField.text)")
+        print("Type: \(typeTextField.text)")
+        print("Have You been here ?: \(isVisited ? "Yes" : "No")")
+        
+//        Eksekusi dan balik ke home screen
+        performSegueWithIdentifier("unwindToHomeScreen", sender: self)
     }
     
     

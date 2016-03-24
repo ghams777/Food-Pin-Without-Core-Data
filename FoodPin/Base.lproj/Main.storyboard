@@ -607,6 +607,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Mwd-lG-e1c">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="save" destination="3p5-Dz-Avy" id="zxE-aM-vkE"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
