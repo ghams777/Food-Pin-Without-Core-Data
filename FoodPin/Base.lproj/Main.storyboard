@@ -172,7 +172,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Hxu-qh-qGd" id="DGQ-e2-t6P"/>
+                                    <outlet property="dataSource" destination="Hxu-qh-qGd" id="Km8-lD-Hby"/>
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7O-kP-Dqc">
@@ -181,13 +181,13 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UuE-c3-Dwr"/>
                                     <barButtonItem systemItem="action" id="cOk-sD-BXz">
                                         <connections>
-                                            <segue destination="8H6-gX-0AU" kind="push" id="EBR-iT-0Qi"/>
+                                            <segue destination="8H6-gX-0AU" kind="push" identifier="showShare" id="EBR-iT-0Qi"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hu7-IG-ayB"/>
                                     <barButtonItem systemItem="compose" id="1Rx-MR-rdZ">
                                         <connections>
-                                            <segue destination="xR4-PM-dNW" kind="push" id="d1R-RQ-Jj9"/>
+                                            <segue destination="xR4-PM-dNW" kind="push" identifier="showReview" id="d1R-RQ-Jj9"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8Rd-Ip-sQ0"/>
@@ -215,7 +215,7 @@
             </objects>
             <point key="canvasLocation" x="1105" y="366"/>
         </scene>
-        <!--Review Restaurant-->
+        <!--Review View Controller-->
         <scene sceneID="kMw-B4-9jB">
             <objects>
                 <viewController id="xR4-PM-dNW" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
@@ -294,15 +294,15 @@
                         <constraints>
                             <constraint firstItem="3Qa-mY-eIP" firstAttribute="leading" secondItem="bZM-gJ-AVP" secondAttribute="leading" id="0o5-ZD-oIc"/>
                             <constraint firstItem="2g3-EX-Nu6" firstAttribute="centerX" secondItem="bZM-gJ-AVP" secondAttribute="centerX" id="1eR-oN-JVT"/>
-                            <constraint firstItem="5mj-gU-B6j" firstAttribute="top" secondItem="UoQ-q6-9DX" secondAttribute="bottom" constant="18" id="KUk-YK-4sC"/>
+                            <constraint firstItem="5mj-gU-B6j" firstAttribute="top" secondItem="UoQ-q6-9DX" secondAttribute="bottom" constant="18" id="4vC-zF-R4k"/>
+                            <constraint firstItem="3Qa-mY-eIP" firstAttribute="top" secondItem="UoQ-q6-9DX" secondAttribute="bottom" id="6Aq-9e-C0D"/>
+                            <constraint firstItem="3Qa-mY-eIP" firstAttribute="bottom" secondItem="2oy-Oq-hqp" secondAttribute="top" id="Hdg-Pl-hTb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5mj-gU-B6j" secondAttribute="trailing" constant="4" id="KgP-hd-LWe"/>
                             <constraint firstItem="2g3-EX-Nu6" firstAttribute="centerY" secondItem="bZM-gJ-AVP" secondAttribute="centerY" id="Q20-6C-ezs"/>
-                            <constraint firstItem="3Qa-mY-eIP" firstAttribute="top" secondItem="UoQ-q6-9DX" secondAttribute="bottom" id="YB3-Ew-QfH"/>
-                            <constraint firstItem="3Qa-mY-eIP" firstAttribute="bottom" secondItem="2oy-Oq-hqp" secondAttribute="top" id="hs0-56-TF1"/>
                             <constraint firstAttribute="trailing" secondItem="3Qa-mY-eIP" secondAttribute="trailing" id="yRi-qv-pDN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Review Restaurant" id="wMV-5H-Dtf"/>
+                    <navigationItem key="navigationItem" id="wMV-5H-Dtf"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="3Qa-mY-eIP" id="IW9-QX-c6x"/>
                         <outlet property="dialogView" destination="2g3-EX-Nu6" id="e47-Wq-hzg"/>

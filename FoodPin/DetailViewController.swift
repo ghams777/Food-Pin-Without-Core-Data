@@ -34,6 +34,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Set navigation bar title
         title = self.restaurant.name
         
+//        Menghilangkan judul tombol back
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
 //        Self Sizing Cell
         tableView.estimatedRowHeight = 36.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
@@ -108,6 +111,20 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         if segue.identifier == "showMap" {
             
             let destinationController = segue.destinationViewController as!MapViewController
+            
+            destinationController.restaurant = restaurant
+        }
+        
+        if segue.identifier == "showReview" {
+            
+            let destinationController = segue.destinationViewController as!ReviewViewController
+            
+            destinationController.restaurant = restaurant
+        }
+        
+        if segue.identifier == "showShare" {
+            
+            let destinationController = segue.destinationViewController as!ShareViewController
             
             destinationController.restaurant = restaurant
         }

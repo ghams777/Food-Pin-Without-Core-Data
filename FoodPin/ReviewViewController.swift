@@ -13,6 +13,8 @@ class ReviewViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var dialogView: UIView!
     
+    var restaurant: Restaurant!
+    
     override func viewDidLoad() {
         
 //        Membuat efek blur pada background
@@ -25,6 +27,8 @@ class ReviewViewController: UIViewController {
         let scale = CGAffineTransformMakeScale(0, 0)
         let translate = CGAffineTransformMakeTranslation(0, 500)
         dialogView.transform = CGAffineTransformConcat(scale, translate)
+        
+        title = "Review \(self.restaurant.name)'s Restaurant"
         
     }
     

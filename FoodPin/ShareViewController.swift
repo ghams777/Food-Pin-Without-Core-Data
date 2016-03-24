@@ -17,6 +17,7 @@ class ShareViewController: UIViewController {
     @IBOutlet weak var messageButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
     
+    var restaurant: Restaurant!
     
     override func viewDidLoad() {
         
@@ -31,6 +32,8 @@ class ShareViewController: UIViewController {
         
         messageButton.transform = CGAffineTransformMakeTranslation(0, 500)
         twitterButton.transform = CGAffineTransformMakeTranslation(0, -500)
+        
+        title = "Share \(self.restaurant.name)'s Restaurant"
         
     }
     
