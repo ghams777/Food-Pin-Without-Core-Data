@@ -21,16 +21,31 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         // Convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString("524 Ct St, Brooklyn, NY 11231", completionHandler: { placemarks, error in
+        geoCoder.geocodeAddressString(restaurant.location, completionHandler: { placemarks, error in
             
+            if error != nil {
+                print(error)
+                return
+            }
             
-//            let annotation = MKPointAnnotation()
-//            annotation.title = "Times Square"
-//            annotation.coordinate = placemark.location.coordinate
-//            self.mapView.showAnnotations([annotation], animated: true)
-//            self.mapView.selectAnnotation(annotation, animated: true)
-        })
-        
+            if placemarks != nil && placemarks!.count > 0 {
+            
+                let placemark = placemarks![0] as CLPlacemark
+            
+                let restaurant = MKPointAnnotation()
+                
+                restaurant.coordinate = placemark.location!.coordinate
+                
+                restaurant.title = self.restaurant.name
+                restaurant.subtitle = self.restaurant.type
+                
+                self.mapView.showAnnotations([restaurant], animated: true)
+                self.mapView.selectAnnotation(restaurant, animated: true)
+                
+                
+            }
+            
+            })
         
     }
     

@@ -103,5 +103,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showMap" {
+            
+            let destinationController = segue.destinationViewController as!MapViewController
+            
+            destinationController.restaurant = restaurant
+        }
+        
+    }
 }
