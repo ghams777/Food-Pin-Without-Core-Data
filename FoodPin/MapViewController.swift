@@ -19,6 +19,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         super.viewDidLoad()
         
+        mapView.delegate = self
+        
         title = "Map \(self.restaurant.name)'s Restaurant"
         
         // Convert address to coordinate and annotate it on map
@@ -49,6 +51,33 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             
             }
         )
+        
+    }
+    
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        let identifier = "MyPin"
+        
+        if annotation.isKindOfClass(MKUserLocation) {
+            return nil
+        }
+        
+//        Reuser the annotaion if possible
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+        }
+        
+        let leftIconView = UIImageView(frame: CGRectMake(0, 0, 53, 53))
+        
+        leftIconView.image = UIImage(named: restaurant.image)
+        
+        annotationView?.leftCalloutAccessoryView = leftIconView
+        
+        return annotationView
         
     }
     
