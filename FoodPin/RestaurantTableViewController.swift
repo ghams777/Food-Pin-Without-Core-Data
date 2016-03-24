@@ -234,6 +234,9 @@ class RestaurantTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToHomeScreen(segue: UIStoryboardSegue) {
+        
+    }
     
     /*
     // Override to support conditional editing of the table view.
