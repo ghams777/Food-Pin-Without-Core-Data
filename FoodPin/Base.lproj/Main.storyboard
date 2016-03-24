@@ -146,9 +146,17 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSC-Mf-b8z">
+                                                    <rect key="frame" x="282" y="2" width="30" height="30"/>
+                                                    <state key="normal" title="Map"/>
+                                                    <connections>
+                                                        <segue destination="qCk-rP-fSU" kind="push" identifier="showMap" id="CQf-cX-3a2"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bYG-bS-hhV" firstAttribute="top" secondItem="IQ4-Ma-4Cd" secondAttribute="topMargin" id="GbH-0B-ybH"/>
+                                                <constraint firstItem="rSC-Mf-b8z" firstAttribute="trailing" secondItem="IQ4-Ma-4Cd" secondAttribute="trailingMargin" constant="-10" id="Gsn-0H-SlH"/>
                                                 <constraint firstItem="bYG-bS-hhV" firstAttribute="trailing" secondItem="IQ4-Ma-4Cd" secondAttribute="trailingMargin" constant="10" id="jOv-rf-rXf"/>
                                                 <constraint firstItem="bYG-bS-hhV" firstAttribute="leading" secondItem="IQ4-Ma-4Cd" secondAttribute="leadingMargin" constant="87" id="vBe-zN-Rxy"/>
                                             </constraints>
@@ -203,7 +211,7 @@
             </objects>
             <point key="canvasLocation" x="1105" y="366"/>
         </scene>
-        <!--Review View Controller-->
+        <!--Review Restaurant-->
         <scene sceneID="kMw-B4-9jB">
             <objects>
                 <viewController id="xR4-PM-dNW" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
@@ -290,7 +298,7 @@
                             <constraint firstAttribute="trailing" secondItem="3Qa-mY-eIP" secondAttribute="trailing" id="yRi-qv-pDN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wMV-5H-Dtf"/>
+                    <navigationItem key="navigationItem" title="Review Restaurant" id="wMV-5H-Dtf"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="3Qa-mY-eIP" id="IW9-QX-c6x"/>
                         <outlet property="dialogView" destination="2g3-EX-Nu6" id="e47-Wq-hzg"/>
@@ -301,7 +309,7 @@
             </objects>
             <point key="canvasLocation" x="1470" y="366"/>
         </scene>
-        <!--Share View Controller-->
+        <!--Share Restaurant-->
         <scene sceneID="G17-yB-qi5">
             <objects>
                 <viewController id="8H6-gX-0AU" customClass="ShareViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
@@ -367,7 +375,7 @@
                             <constraint firstItem="PGY-B5-wPV" firstAttribute="bottom" secondItem="ouS-Yo-C7F" secondAttribute="top" id="ug0-NZ-F6L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="E6b-gY-ztp"/>
+                    <navigationItem key="navigationItem" title="Share Restaurant" id="E6b-gY-ztp"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="PGY-B5-wPV" id="j4E-Wv-vaB"/>
                         <outlet property="emailButton" destination="3Tr-2N-LRi" id="6lW-P9-s16"/>
@@ -380,6 +388,36 @@
                 <exit id="84p-DR-sve" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1470" y="1115"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="qf1-lc-Xle">
+            <objects>
+                <viewController id="qCk-rP-fSU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XeS-a4-n9p"/>
+                        <viewControllerLayoutGuide type="bottom" id="THx-CO-bcg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="phS-Sl-TyG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SD8-sx-FvW">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SD8-sx-FvW" firstAttribute="leading" secondItem="phS-Sl-TyG" secondAttribute="leading" id="1e1-Li-WLY"/>
+                            <constraint firstAttribute="trailing" secondItem="SD8-sx-FvW" secondAttribute="trailing" id="3Id-PX-adI"/>
+                            <constraint firstItem="SD8-sx-FvW" firstAttribute="top" secondItem="XeS-a4-n9p" secondAttribute="bottom" id="Xbw-2h-qBR"/>
+                            <constraint firstItem="SD8-sx-FvW" firstAttribute="bottom" secondItem="THx-CO-bcg" secondAttribute="top" id="oos-MB-fAB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="E4O-aP-W2o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTH-HM-qQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="1115"/>
         </scene>
     </scenes>
     <resources>
