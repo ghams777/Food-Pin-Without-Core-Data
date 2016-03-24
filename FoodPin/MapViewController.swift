@@ -22,7 +22,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // Convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString("524 Ct St, Brooklyn, NY 11231", completionHandler: { placemarks, error in
-            // Process the placemark
+            
+            
+//            let annotation = MKPointAnnotation()
+//            annotation.title = "Times Square"
+//            annotation.coordinate = placemark.location.coordinate
+//            self.mapView.showAnnotations([annotation], animated: true)
+//            self.mapView.selectAnnotation(annotation, animated: true)
         })
         
         
