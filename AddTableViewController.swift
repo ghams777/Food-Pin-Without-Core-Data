@@ -80,14 +80,35 @@ class AddTableViewController: UITableViewController, UIImagePickerControllerDele
             return
         }
         
-//        Jika tidak ada field yang error
-        print("Name: \(nameTextField.text)")
-        print("Location: \(locationTextField.text)")
-        print("Type: \(typeTextField.text)")
-        print("Have You been here ?: \(isVisited ? "Yes" : "No")")
+        // If all fields are correctly filled in, extract the field value
+        print("Name: " + nameTextField.text!)
+        print("Type: " + typeTextField.text!)
+        print("Location: " + locationTextField.text!)
+        print("Have you been here: " + (isVisited ? "Yes" : "No"))
         
-//        Eksekusi dan balik ke home screen
+        // Execute the unwind segue and go back to the home screen
         performSegueWithIdentifier("unwindToHomeScreen", sender: self)
+    }
+    
+    
+    @IBAction func updateIsVisited(sender: AnyObject) {
+        
+//        Yes button clicked
+        let buttonClicked = sender as! UIButton
+        
+        if buttonClicked == yesButton {
+            isVisited = true
+            yesButton.backgroundColor = UIColor(red: 235.0/255.0, green: 73.0/255.0, blue: 27.0/255.0, alpha: 1.0)
+            noButton.backgroundColor = UIColor.grayColor()
+            
+        } else if buttonClicked == noButton {
+            isVisited = false
+            noButton.backgroundColor = UIColor(red: 235.0/255.0, green: 73.0/255.0, blue: 27.0/255.0, alpha: 1.0)
+            yesButton.backgroundColor = UIColor.grayColor()
+            
+        }
+        
+        
     }
     
     

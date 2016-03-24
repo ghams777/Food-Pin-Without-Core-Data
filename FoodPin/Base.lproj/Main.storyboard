@@ -565,13 +565,16 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR9-9S-pTK">
                                                     <rect key="frame" x="8" y="33" width="50" height="30"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="1" green="0.32051120630000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="BV8-0L-6yg"/>
                                                         <constraint firstAttribute="height" constant="30" id="djm-Ls-J4o"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Yes"/>
+                                                    <connections>
+                                                        <action selector="updateIsVisited:" destination="3p5-Dz-Avy" eventType="touchUpInside" id="g66-Cr-pME"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isl-fb-Tgd">
                                                     <rect key="frame" x="75" y="33" width="50" height="30"/>
@@ -582,6 +585,9 @@
                                                     </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="No"/>
+                                                    <connections>
+                                                        <action selector="updateIsVisited:" destination="3p5-Dz-Avy" eventType="touchUpInside" id="rbz-hp-Ah7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -602,7 +608,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2zn-F0-f0X">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="d61-Z9-7bP" kind="unwind" unwindAction="unwindToHomeScreen:" id="3ig-Y6-Mj7"/>
+                                <segue destination="d61-Z9-7bP" kind="unwind" identifier="unwindToHomeScreen" unwindAction="unwindToHomeScreen:" id="sPA-cI-Ccd"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Mwd-lG-e1c">
@@ -616,9 +622,9 @@
                         <outlet property="imageView" destination="aO8-Dc-EuF" id="DKz-J6-NWL"/>
                         <outlet property="locationTextField" destination="gBy-2U-VVR" id="YcW-6T-58d"/>
                         <outlet property="nameTextField" destination="hpB-5o-dUN" id="ZF8-Jm-gyE"/>
-                        <outlet property="noButton" destination="Isl-fb-Tgd" id="ob9-Ua-SQJ"/>
+                        <outlet property="noButton" destination="Isl-fb-Tgd" id="VGc-JV-Pdc"/>
                         <outlet property="typeTextField" destination="SNh-UF-JLX" id="wdw-ES-hXG"/>
-                        <outlet property="yesButton" destination="mR9-9S-pTK" id="vIR-y9-dH5"/>
+                        <outlet property="yesButton" destination="mR9-9S-pTK" id="igI-lK-xEH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgO-4I-u8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
