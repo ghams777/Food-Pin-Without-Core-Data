@@ -150,7 +150,7 @@
                                                     <rect key="frame" x="282" y="2" width="30" height="30"/>
                                                     <state key="normal" title="Map"/>
                                                     <connections>
-                                                        <segue destination="qCk-rP-fSU" kind="push" identifier="showMap" id="CQf-cX-3a2"/>
+                                                        <segue destination="qCk-rP-fSU" kind="push" identifier="showMap" id="PMi-8E-uw0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -160,6 +160,7 @@
                                                 <constraint firstItem="bYG-bS-hhV" firstAttribute="leading" secondItem="Yg9-hQ-20E" secondAttribute="trailing" constant="10" id="F1n-iT-hRA"/>
                                                 <constraint firstItem="rSC-Mf-b8z" firstAttribute="trailing" secondItem="IQ4-Ma-4Cd" secondAttribute="trailingMargin" constant="10" id="L2b-rR-bSg"/>
                                                 <constraint firstItem="rSC-Mf-b8z" firstAttribute="leading" secondItem="bYG-bS-hhV" secondAttribute="trailing" constant="10" id="Obf-MI-5ut"/>
+                                                <constraint firstItem="rSC-Mf-b8z" firstAttribute="trailing" secondItem="IQ4-Ma-4Cd" secondAttribute="trailingMargin" constant="-10" id="jUN-bg-Ee3"/>
                                                 <constraint firstItem="bYG-bS-hhV" firstAttribute="leading" secondItem="IQ4-Ma-4Cd" secondAttribute="leadingMargin" constant="87" id="tKj-3w-Fx4"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -395,7 +396,7 @@
         <!--Map-->
         <scene sceneID="qf1-lc-Xle">
             <objects>
-                <viewController id="qCk-rP-fSU" sceneMemberID="viewController">
+                <viewController id="qCk-rP-fSU" customClass="MapViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XeS-a4-n9p"/>
                         <viewControllerLayoutGuide type="bottom" id="THx-CO-bcg"/>
@@ -406,6 +407,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SD8-sx-FvW">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qCk-rP-fSU" id="GOR-QR-GCe"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,6 +421,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="E4O-aP-W2o"/>
+                    <connections>
+                        <outlet property="mapView" destination="SD8-sx-FvW" id="ieB-3p-J0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTH-HM-qQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -102,5 +102,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBAction func close(segue:UIStoryboardSegue) {
         
     }
+    
 
 }
