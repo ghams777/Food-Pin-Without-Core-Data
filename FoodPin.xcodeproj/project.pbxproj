@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		849C96341CA8CE0200689E66 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C96331CA8CE0200689E66 /* AddTableViewController.swift */; };
 		84B29CB51CA0EB6900530A97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B29CB41CA0EB6900530A97 /* AppDelegate.swift */; };
 		84B29CBA1CA0EB6900530A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B29CB81CA0EB6900530A97 /* Main.storyboard */; };
 		84B29CBC1CA0EB6900530A97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B29CBB1CA0EB6900530A97 /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		84B29CED1CA129C800530A97 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B29CEC1CA129C800530A97 /* DetailTableViewCell.swift */; };
 		84B644511CA38DF800394F21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B644501CA38DF800394F21 /* MapKit.framework */; };
 		84B644531CA3AA1800394F21 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B644521CA3AA1800394F21 /* MapViewController.swift */; };
-		84B644551CA3E13F00394F21 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B644541CA3E13F00394F21 /* AddTableViewController.swift */; };
 		84F0821D1CA299B400F4CE29 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0821C1CA299B400F4CE29 /* ReviewViewController.swift */; };
 		84F0821F1CA2A3E700F4CE29 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0821E1CA2A3E700F4CE29 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		849C96331CA8CE0200689E66 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		84B29CB11CA0EB6900530A97 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B29CB41CA0EB6900530A97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B29CB91CA0EB6900530A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		84B29CEC1CA129C800530A97 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		84B644501CA38DF800394F21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84B644521CA3AA1800394F21 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		84B644541CA3E13F00394F21 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTableViewController.swift; path = ../AddTableViewController.swift; sourceTree = "<group>"; };
 		84F0821C1CA299B400F4CE29 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		84F0821E1CA2A3E700F4CE29 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +126,7 @@
 				84F0821C1CA299B400F4CE29 /* ReviewViewController.swift */,
 				84F0821E1CA2A3E700F4CE29 /* ShareViewController.swift */,
 				84B644521CA3AA1800394F21 /* MapViewController.swift */,
-				84B644541CA3E13F00394F21 /* AddTableViewController.swift */,
+				849C96331CA8CE0200689E66 /* AddTableViewController.swift */,
 				84B29CB81CA0EB6900530A97 /* Main.storyboard */,
 				84B29CBB1CA0EB6900530A97 /* Assets.xcassets */,
 				84B29CBD1CA0EB6900530A97 /* LaunchScreen.storyboard */,
@@ -290,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B29CED1CA129C800530A97 /* DetailTableViewCell.swift in Sources */,
+				849C96341CA8CE0200689E66 /* AddTableViewController.swift in Sources */,
 				84B29CEB1CA1119E00530A97 /* Restaurant.swift in Sources */,
 				84F0821D1CA299B400F4CE29 /* ReviewViewController.swift in Sources */,
 				84B29CE51CA0F0E600530A97 /* CustomTableViewCell.swift in Sources */,
@@ -298,7 +299,6 @@
 				84B29CB51CA0EB6900530A97 /* AppDelegate.swift in Sources */,
 				84F0821F1CA2A3E700F4CE29 /* ShareViewController.swift in Sources */,
 				84B29CE71CA1075200530A97 /* DetailViewController.swift in Sources */,
-				84B644551CA3E13F00394F21 /* AddTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
